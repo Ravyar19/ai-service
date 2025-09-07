@@ -19,7 +19,8 @@ export const ConversationStatusButton = ({
           disabled={disabled}
           onClick={onClick}
           size="sm"
-          className="status-resolved"
+          variant="ghost"
+          className="status-resolved gap-2"
         >
           <CheckIcon />
           Resolved
@@ -35,7 +36,8 @@ export const ConversationStatusButton = ({
           disabled={disabled}
           onClick={onClick}
           size="sm"
-          className="status-escalated"
+          variant="ghost"
+          className="status-escalated gap-2"
         >
           <ArrowUpIcon />
           Escalated
@@ -50,7 +52,8 @@ export const ConversationStatusButton = ({
         disabled={disabled}
         onClick={onClick}
         size="sm"
-        className="status-unresolved"
+        variant="ghost"
+        className="status-unresolved gap-2"
       >
         <ArrowRightIcon />
         Unresolved

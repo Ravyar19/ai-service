@@ -33,8 +33,8 @@ export const AIMessageContent = ({
     className={cn(
       "break-words",
       "flex flex-col gap-2 rounded-lg border border-border px-3 py-2 text-sm",
-      "chat-agent-bubble",
       "group-[.is-user]:chat-user-bubble group-[.is-user]:border-transparent",
+      "group-[.is-assistant]:chat-agent-bubble",
       className
     )}
     {...props}

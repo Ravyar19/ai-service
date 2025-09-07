@@ -183,7 +183,13 @@ export const ConversationIdView = ({
                     from={message.role === "user" ? "assistant" : "user"}
                     key={message.id}
                   >
-                    <AIMessageContent>
+                    <AIMessageContent
+                      className={
+                        message.role === "user"
+                          ? "chat-user-bubble text-white"
+                          : "chat-agent-bubble"
+                      }
+                    >
                       <AIResponse>{message.content || ""}</AIResponse>
                     </AIMessageContent>
                     {message.role === "user" && (

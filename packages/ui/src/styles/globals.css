@@ -8,96 +8,102 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Sophisticated dark navy theme inspired by deep midnight blue */
-  --background: #0f1419;
-  --foreground: #e8eaed;
-  --card: #1a1f2e;
-  --card-foreground: #e8eaed;
-  --popover: #1a1f2e;
-  --popover-foreground: #e8eaed;
-  --primary: #3a5a7a;
+  /* Modern light theme with clean, professional colors */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #3b82f6;
   --primary-foreground: #ffffff;
-  --secondary: #2a3441;
-  --secondary-foreground: #e8eaed;
-  --muted: #2a3441;
-  --muted-foreground: #9aa0a6;
-  --accent: #3a4552;
-  --accent-foreground: #e8eaed;
-  --destructive: #8b4a4a;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #e2e8f0;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #3a4552;
-  --input: #2a3441;
-  --ring: #3a5a7a;
-  --chart-1: #3a5a7a;
-  --chart-2: #4a6a8a;
-  --chart-3: #5a7a9a;
-  --chart-4: #6a8aaa;
-  --chart-5: #7a9aba;
+  --border: #e2e8f0;
+  --input: #f8fafc;
+  --ring: #3b82f6;
+  --chart-1: #3b82f6;
+  --chart-2: #8b5cf6;
+  --chart-3: #06b6d4;
+  --chart-4: #10b981;
+  --chart-5: #f59e0b;
   --radius: 12px;
 
-  /* Sophisticated sidebar colors */
-  --sidebar: #1a1f2e;
-  --sidebar-foreground: #e8eaed;
-  --sidebar-primary: #3a5a7a;
+  /* Light sidebar colors */
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #3b82f6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #3a4552;
-  --sidebar-accent-foreground: #e8eaed;
-  --sidebar-border: #3a4552;
-  --sidebar-ring: #3a5a7a;
+  --sidebar-accent: #e2e8f0;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #3b82f6;
 
-  /* Chat-specific colors for more control */
-  --chat-user-bubble: #2a3441;
-  --chat-agent-bubble: #3a5a7a;
-  --chat-system-bubble: #4a6a8a;
-  --status-active: #5a7a5a;
-  --status-escalated: #8a6a4a;
-  --status-resolved: #6a6a6a;
-  --status-unresolved: #8b4a4a;
+  /* Chat-specific colors for light theme */
+  --chat-user-bubble: #3b82f6; /* A clear, friendly blue */
+  --chat-agent-bubble: #f1f5f9; /* A subtle, professional gray */
+  --chat-system-bubble: #e2e8f0;
+  --status-active: #10b981;
+  --status-escalated: #f59e0b;
+  --status-resolved: #6b7280;
+  --status-unresolved: #10b981; /* Changed to green to indicate active */
+  --status-unresolved-foreground: #ffffff;
+  --status-escalated-foreground: #ffffff;
+  --status-resolved-foreground: #ffffff;
 }
 
 .dark {
-  /* Enhanced dark theme with deeper navy tones */
-  --background: #0a0e13;
-  --foreground: #f1f3f4;
-  --card: #151b26;
-  --card-foreground: #f1f3f4;
-  --popover: #151b26;
-  --popover-foreground: #f1f3f4;
-  --primary: #4a6a8a;
+  /* Modern dark theme with deep slate colors */
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+  --primary: #3b82f6;
   --primary-foreground: #ffffff;
-  --secondary: #1f2937;
-  --secondary-foreground: #f1f3f4;
-  --muted: #1f2937;
-  --muted-foreground: #9ca3af;
-  --accent: #374151;
-  --accent-foreground: #f1f3f4;
-  --destructive: #9a5a5a;
+  --secondary: #334155;
+  --secondary-foreground: #f8fafc;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #475569;
+  --accent-foreground: #f8fafc;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #374151;
-  --input: #1f2937;
-  --ring: #4a6a8a;
-  --chart-1: #4a6a8a;
-  --chart-2: #5a7a9a;
-  --chart-3: #6a8aaa;
-  --chart-4: #7a9aba;
-  --chart-5: #8aaaca;
-  --sidebar: #151b26;
-  --sidebar-foreground: #f1f3f4;
-  --sidebar-primary: #4a6a8a;
+  --border: #475569;
+  --input: #334155;
+  --ring: #3b82f6;
+  --chart-1: #3b82f6;
+  --chart-2: #8b5cf6;
+  --chart-3: #06b6d4;
+  --chart-4: #10b981;
+  --chart-5: #f59e0b;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #3b82f6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #374151;
-  --sidebar-accent-foreground: #f1f3f4;
-  --sidebar-border: #374151;
-  --sidebar-ring: #4a6a8a;
+  --sidebar-accent: #475569;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #475569;
+  --sidebar-ring: #3b82f6;
 
-  /* Chat-specific colors for more control */
-  --chat-user-bubble: #1f2937;
-  --chat-agent-bubble: #4a6a8a;
-  --chat-system-bubble: #5a7a9a;
-  --status-active: #6a8a6a;
-  --status-escalated: #9a7a5a;
-  --status-resolved: #7a7a7a;
-  --status-unresolved: #9a5a5a;
+  /* Chat-specific colors for dark theme */
+  --chat-user-bubble: #3b82f6; /* A vibrant, clear blue */
+  --chat-agent-bubble: #1e293b; /* A deep, professional slate */
+  --chat-system-bubble: #334155;
+  --status-active: #10b981;
+  --status-escalated: #f59e0b;
+  --status-resolved: #6b7280;
+  --status-unresolved: #10b981; /* Changed to green to indicate active */
+  --status-unresolved-foreground: #ffffff;
+  --status-escalated-foreground: #ffffff;
+  --status-resolved-foreground: #ffffff;
 }
 
 @theme inline {
@@ -144,6 +150,9 @@
   --color-status-escalated: var(--status-escalated);
   --color-status-resolved: var(--status-resolved);
   --color-status-unresolved: var(--status-unresolved);
+  --color-status-unresolved-foreground: var(--status-unresolved-foreground);
+  --color-status-escalated-foreground: var(--status-escalated-foreground);
+  --color-status-resolved-foreground: var(--status-resolved-foreground);
 }
 
 @layer base {
@@ -202,15 +211,15 @@
 
   /* Chat-specific utility classes */
   .chat-user-bubble {
-    @apply bg-chat-user-bubble text-foreground;
+    @apply bg-chat-user-bubble text-white;
   }
 
   .chat-agent-bubble {
-    @apply bg-chat-agent-bubble text-white;
+    @apply bg-chat-agent-bubble text-foreground;
   }
 
   .chat-system-bubble {
-    @apply bg-chat-system-bubble text-white;
+    @apply bg-chat-system-bubble text-foreground;
   }
 
   .status-active {
@@ -218,14 +227,14 @@
   }
 
   .status-escalated {
-    @apply bg-status-escalated text-white;
+    @apply bg-status-escalated text-status-escalated-foreground;
   }
 
   .status-resolved {
-    @apply bg-status-resolved text-white;
+    @apply bg-status-resolved text-status-resolved-foreground;
   }
 
   .status-unresolved {
-    @apply bg-status-unresolved text-white;
+    @apply bg-status-unresolved text-status-unresolved-foreground;
   }
 }
