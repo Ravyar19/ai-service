@@ -19,7 +19,7 @@ export const ConversationStatusButton = ({
           disabled={disabled}
           onClick={onClick}
           size="sm"
-          variant="secondary"
+          className="status-resolved"
         >
           <CheckIcon />
           Resolved
@@ -35,7 +35,7 @@ export const ConversationStatusButton = ({
           disabled={disabled}
           onClick={onClick}
           size="sm"
-          variant="tertiary"
+          className="status-escalated"
         >
           <ArrowUpIcon />
           Escalated
@@ -50,7 +50,7 @@ export const ConversationStatusButton = ({
         disabled={disabled}
         onClick={onClick}
         size="sm"
-        variant="destructive"
+        className="status-unresolved"
       >
         <ArrowRightIcon />
         Unresolved

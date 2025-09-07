@@ -42,26 +42,26 @@ const ConversationSkeleton = () => (
   <div className="flex flex-col gap-4 p-4">
     {/* AI Message Skeleton (assistant role) */}
     <div className="group flex w-full items-end  gap-2 py-2 is-assistant flex-row-reverse justify-end">
-      <div className="max-w-[80%] flex flex-col gap-2 rounded-lg border border-border px-3 py-2 text-sm bg-background text-foreground">
-        <Skeleton className="h-4 w-48" />
-        <Skeleton className="h-4 w-32" />
+      <div className="max-w-[80%] flex flex-col gap-2 rounded-lg border border-border px-3 py-2 text-sm chat-agent-bubble">
+        <Skeleton className="h-4 w-48 bg-white/20" />
+        <Skeleton className="h-4 w-32 bg-white/20" />
       </div>
       <Skeleton className="h-8 w-8 rounded-full" />
     </div>
 
     {/* User Message Skeleton (user role) */}
     <div className="group flex w-full items-end justify-end gap-2 py-2 is-user">
-      <div className="max-w-[80%] flex flex-col gap-2 rounded-lg border border-border px-3 py-2 text-sm bg-gradient-to-b from-primary to-[#0b63f3] text-primary-foreground">
+      <div className="max-w-[80%] flex flex-col gap-2 rounded-lg border border-border px-3 py-2 text-sm chat-user-bubble">
         <Skeleton className="h-4 w-36 bg-white/20" />
       </div>
     </div>
 
     {/* AI Message Skeleton (assistant role) */}
     <div className="group flex w-full items-end  gap-2 py-2 is-assistant flex-row-reverse justify-end">
-      <div className="max-w-[80%] flex flex-col gap-2 rounded-lg border border-border px-3 py-2 text-sm bg-background text-foreground">
-        <Skeleton className="h-4 w-56" />
-        <Skeleton className="h-4 w-40" />
-        <Skeleton className="h-4 w-24" />
+      <div className="max-w-[80%] flex flex-col gap-2 rounded-lg border border-border px-3 py-2 text-sm chat-agent-bubble">
+        <Skeleton className="h-4 w-56 bg-white/20" />
+        <Skeleton className="h-4 w-40 bg-white/20" />
+        <Skeleton className="h-4 w-24 bg-white/20" />
       </div>
       <Skeleton className="h-8 w-8 rounded-full" />
     </div>
@@ -258,7 +258,7 @@ export const ConversationIdView = ({
                 }
                 status="ready"
                 type="submit"
-                className="bg-slate-800 hover:bg-slate-700 text-white border-slate-800 mr-2 mb-2"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground border-primary mr-2 mb-2"
               />
             </AIInputToolbar>
           </AIInput>

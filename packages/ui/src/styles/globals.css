@@ -8,77 +8,96 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Intercom exact color palette */
-  --background: #f8f9fa;
-  --foreground: #2c3e50;
-  --card: #ffffff;
-  --card-foreground: #2c3e50;
-  --popover: #ffffff;
-  --popover-foreground: #2c3e50;
-  --primary: #1f8ce6;
+  /* Sophisticated dark navy theme inspired by deep midnight blue */
+  --background: #0f1419;
+  --foreground: #e8eaed;
+  --card: #1a1f2e;
+  --card-foreground: #e8eaed;
+  --popover: #1a1f2e;
+  --popover-foreground: #e8eaed;
+  --primary: #3a5a7a;
   --primary-foreground: #ffffff;
-  --secondary: #f1f3f4;
-  --secondary-foreground: #2c3e50;
-  --muted: #f1f3f4;
-  --muted-foreground: #6c757d;
-  --accent: #e3f2fd;
-  --accent-foreground: #2c3e50;
-  --destructive: #dc3545;
+  --secondary: #2a3441;
+  --secondary-foreground: #e8eaed;
+  --muted: #2a3441;
+  --muted-foreground: #9aa0a6;
+  --accent: #3a4552;
+  --accent-foreground: #e8eaed;
+  --destructive: #8b4a4a;
   --destructive-foreground: #ffffff;
-  --border: #e9ecef;
-  --input: #f1f3f4;
-  --ring: #1f8ce6;
-  --chart-1: #1f8ce6;
-  --chart-2: #42a5f5;
-  --chart-3: #66bb6a;
-  --chart-4: #ffa726;
-  --chart-5: #ef5350;
+  --border: #3a4552;
+  --input: #2a3441;
+  --ring: #3a5a7a;
+  --chart-1: #3a5a7a;
+  --chart-2: #4a6a8a;
+  --chart-3: #5a7a9a;
+  --chart-4: #6a8aaa;
+  --chart-5: #7a9aba;
   --radius: 12px;
 
-  /* Intercom sidebar colors */
-  --sidebar: #f8f9fa;
-  --sidebar-foreground: #2c3e50;
-  --sidebar-primary: #1f8ce6;
+  /* Sophisticated sidebar colors */
+  --sidebar: #1a1f2e;
+  --sidebar-foreground: #e8eaed;
+  --sidebar-primary: #3a5a7a;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e3f2fd;
-  --sidebar-accent-foreground: #2c3e50;
-  --sidebar-border: #e9ecef;
-  --sidebar-ring: #1f8ce6;
+  --sidebar-accent: #3a4552;
+  --sidebar-accent-foreground: #e8eaed;
+  --sidebar-border: #3a4552;
+  --sidebar-ring: #3a5a7a;
+
+  /* Chat-specific colors for more control */
+  --chat-user-bubble: #2a3441;
+  --chat-agent-bubble: #3a5a7a;
+  --chat-system-bubble: #4a6a8a;
+  --status-active: #5a7a5a;
+  --status-escalated: #8a6a4a;
+  --status-resolved: #6a6a6a;
+  --status-unresolved: #8b4a4a;
 }
 
 .dark {
-  --background: #1a1a1a;
-  --foreground: #ffffff;
-  --card: #2a2a2a;
-  --card-foreground: #ffffff;
-  --popover: #2a2a2a;
-  --popover-foreground: #ffffff;
-  --primary: #4a90e2;
+  /* Enhanced dark theme with deeper navy tones */
+  --background: #0a0e13;
+  --foreground: #f1f3f4;
+  --card: #151b26;
+  --card-foreground: #f1f3f4;
+  --popover: #151b26;
+  --popover-foreground: #f1f3f4;
+  --primary: #4a6a8a;
   --primary-foreground: #ffffff;
-  --secondary: #3a3a3a;
-  --secondary-foreground: #ffffff;
-  --muted: #3a3a3a;
-  --muted-foreground: #a0a0a0;
-  --accent: #4a4a4a;
-  --accent-foreground: #ffffff;
-  --destructive: #dc3545;
+  --secondary: #1f2937;
+  --secondary-foreground: #f1f3f4;
+  --muted: #1f2937;
+  --muted-foreground: #9ca3af;
+  --accent: #374151;
+  --accent-foreground: #f1f3f4;
+  --destructive: #9a5a5a;
   --destructive-foreground: #ffffff;
-  --border: #404040;
-  --input: #3a3a3a;
-  --ring: #4a90e2;
-  --chart-1: #4a90e2;
-  --chart-2: #5aa3f0;
-  --chart-3: #6bb6ff;
-  --chart-4: #7cc9ff;
-  --chart-5: #8ddcff;
-  --sidebar: #2a2a2a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #4a90e2;
+  --border: #374151;
+  --input: #1f2937;
+  --ring: #4a6a8a;
+  --chart-1: #4a6a8a;
+  --chart-2: #5a7a9a;
+  --chart-3: #6a8aaa;
+  --chart-4: #7a9aba;
+  --chart-5: #8aaaca;
+  --sidebar: #151b26;
+  --sidebar-foreground: #f1f3f4;
+  --sidebar-primary: #4a6a8a;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #4a4a4a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #404040;
-  --sidebar-ring: #4a90e2;
+  --sidebar-accent: #374151;
+  --sidebar-accent-foreground: #f1f3f4;
+  --sidebar-border: #374151;
+  --sidebar-ring: #4a6a8a;
+
+  /* Chat-specific colors for more control */
+  --chat-user-bubble: #1f2937;
+  --chat-agent-bubble: #4a6a8a;
+  --chat-system-bubble: #5a7a9a;
+  --status-active: #6a8a6a;
+  --status-escalated: #9a7a5a;
+  --status-resolved: #7a7a7a;
+  --status-unresolved: #9a5a5a;
 }
 
 @theme inline {
@@ -118,6 +137,13 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-chat-user-bubble: var(--chat-user-bubble);
+  --color-chat-agent-bubble: var(--chat-agent-bubble);
+  --color-chat-system-bubble: var(--chat-system-bubble);
+  --color-status-active: var(--status-active);
+  --color-status-escalated: var(--status-escalated);
+  --color-status-resolved: var(--status-resolved);
+  --color-status-unresolved: var(--status-unresolved);
 }
 
 @layer base {
@@ -126,5 +152,80 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Enhanced hover states and transitions */
+  button,
+  [role="button"],
+  .cursor-pointer {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Improved focus states */
+  *:focus-visible {
+    @apply ring-2 ring-ring/50 ring-offset-2 ring-offset-background;
+  }
+
+  /* Enhanced scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-primary/20 text-primary-foreground;
+  }
+
+  /* Enhanced link hover effects */
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Improved input focus states */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply ring-2 ring-ring/50 border-ring;
+  }
+
+  /* Chat-specific utility classes */
+  .chat-user-bubble {
+    @apply bg-chat-user-bubble text-foreground;
+  }
+
+  .chat-agent-bubble {
+    @apply bg-chat-agent-bubble text-white;
+  }
+
+  .chat-system-bubble {
+    @apply bg-chat-system-bubble text-white;
+  }
+
+  .status-active {
+    @apply bg-status-active text-white;
+  }
+
+  .status-escalated {
+    @apply bg-status-escalated text-white;
+  }
+
+  .status-resolved {
+    @apply bg-status-resolved text-white;
+  }
+
+  .status-unresolved {
+    @apply bg-status-unresolved text-white;
   }
 }
