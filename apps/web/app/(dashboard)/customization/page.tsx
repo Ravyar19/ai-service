@@ -1,7 +1,8 @@
+import { CustomizationView } from "@/modules/customization/ui/views/customization-view";
 import React from "react";
 
 function Page() {
-  return <div>Customization</div>;
+  return <CustomizationView />;
 }
 
 export default Page;
