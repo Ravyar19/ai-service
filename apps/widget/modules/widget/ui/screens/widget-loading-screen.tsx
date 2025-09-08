@@ -7,12 +7,13 @@ import {
   loadingMessageAtom,
   organizationIdAtom,
   screenAtom,
+  widgetSettingsAtom,
 } from "../../atoms/widget-atoms";
 
 import { WidgetHeader } from "../components/widget-header";
 import { LoaderIcon } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useAction, useMutation } from "convex/react";
+import { useAction, useMutation, useQuery } from "convex/react";
 import { api } from "@workspace/backend/_generated/api";
 
 type InitStep = "org" | "session" | "settings" | "vapi" | "done";
@@ -33,6 +34,7 @@ export const WidgetLoadingScreen = ({
   const contactSessionId = useAtomValue(
     contactSessionIdAtomFamily(organizationId || "")
   );
+  const setWidgetSettings = useSetAtom(widgetSettingsAtom);
 
   //validate org
   const validateOrganization = useAction(api.public.organizations.validate);
@@ -82,7 +84,7 @@ export const WidgetLoadingScreen = ({
 
     if (!contactSessionId) {
       setSessionValid(false);
-      setStep("done");
+      setStep("settings");
       return;
     }
     setLoadingMessage("Validating session...");
@@ -91,11 +93,11 @@ export const WidgetLoadingScreen = ({
     })
       .then((result) => {
         setSessionValid(result.valid);
-        setStep("done");
+        setStep("settings");
       })
       .catch(() => {
         setSessionValid(false);
-        setStep("done");
+        setStep("settings");
       });
   }, [
     step,
@@ -106,6 +108,28 @@ export const WidgetLoadingScreen = ({
     setSessionValid,
     setStep,
   ]);
+
+  // load widget settings
+
+  const widgetSettings = useQuery(
+    api.public.widgetSettings.getByOrganizationId,
+    organizationId
+      ? {
+          organizationId,
+        }
+      : "skip"
+  );
+
+  useEffect(() => {
+    if (step !== "settings") {
+      return;
+    }
+    setLoadingMessage("Loading widget settings...");
+    if (widgetSettings !== undefined && organizationId) {
+      setWidgetSettings(widgetSettings);
+      setStep("done");
+    }
+  }, [widgetSettings, setWidgetSettings, step, setLoadingMessage, setStep]);
 
   useEffect(() => {
     if (step !== "done") return;

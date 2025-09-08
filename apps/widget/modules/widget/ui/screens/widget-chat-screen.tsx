@@ -8,6 +8,7 @@ import {
   contactSessionIdAtomFamily,
   organizationIdAtom,
   previousScreenAtom,
+  widgetSettingsAtom,
 } from "../../atoms/widget-atoms";
 import { ArrowLeftIcon, MenuIcon } from "lucide-react";
 import { WidgetHeader } from "../components/widget-header";
@@ -43,6 +44,7 @@ import {
 } from "@workspace/ui/components/ai/suggestion";
 import { Form, FormField } from "@workspace/ui/components/form";
 import { DicebearAvatar } from "@workspace/ui/components/dicebear-avatar";
+import { useMemo } from "react";
 
 const formSchema = z.object({
   message: z.string().min(1, "Message is required"),
@@ -58,7 +60,7 @@ export const WidgetChatScreen = () => {
   const contactSessionId = useAtomValue(
     contactSessionIdAtomFamily(organizationId || "")
   );
-
+  const widgetSettings = useAtomValue(widgetSettingsAtom);
   const conversation = useQuery(
     api.public.conversations.getOne,
     conversationId && contactSessionId
@@ -68,6 +70,15 @@ export const WidgetChatScreen = () => {
         }
       : "skip"
   );
+
+  const suggestions = useMemo(() => {
+    if (!widgetSettings) return [];
+    return Object.keys(widgetSettings.defaultSuggestions).map((key) => {
+      return widgetSettings.defaultSuggestions[
+        key as keyof typeof widgetSettings.defaultSuggestions
+      ];
+    });
+  }, [widgetSettings]);
 
   const messages = useThreadMessages(
     api.public.messages.getMany,
@@ -189,6 +200,28 @@ export const WidgetChatScreen = () => {
             ))}
         </AIConversationContent>
       </AIConversation>
+      {toUIMessages(messages.results ?? [])?.length === 1 && (
+        <AISuggestions className="flex w-full flex-col  items-end p-2">
+          {suggestions.map((suggestion) => {
+            if (!suggestion) return null;
+            return (
+              <AISuggestion
+                key={suggestion}
+                suggestion={suggestion}
+                onClick={() => {
+                  form.setValue("message", suggestion, {
+                    shouldValidate: true,
+                    shouldDirty: true,
+                    shouldTouch: true,
+                  });
+                  form.handleSubmit(onSubmit)();
+                }}
+              />
+            );
+          })}
+        </AISuggestions>
+      )}
+
       <Form {...form}>
         <AIInput
           onSubmit={form.handleSubmit(onSubmit)}
